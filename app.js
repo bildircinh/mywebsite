@@ -7,15 +7,19 @@ const port = 3000;
 app.use(expressLayouts)
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
-app.set('layout', 'layout')
+app.set('layout', 'layout_inner')
 app.set("layout extractScripts", true)
 app.set("layout extractStyles", true)
 
 
 app.get('/', (req,res)=>{
-    res.render('home')
+    res.render('index',{layout:'layout'})
 })
 
+
+app.get('/iletisim', (req,res)=>{
+    res.render('contact')
+})
 
 
 
