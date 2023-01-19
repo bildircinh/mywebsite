@@ -1,4 +1,4 @@
-import express from 'express' 
+import express from 'express'
 import expressLayouts from 'express-ejs-layouts'
 
 const app = express()
@@ -12,21 +12,29 @@ app.set("layout extractScripts", true)
 app.set("layout extractStyles", true)
 
 
-app.get('/', (req,res)=>{
-    res.render('index',{layout:'layout'})
+app.get('/', (req, res) => {
+    res.render('index', { layout: 'layout' })
 })
 
 
-app.get('/iletisim', (req,res)=>{
+app.get('/iletisim', (req, res) => {
     res.render('contact')
 })
 
+app.get('/hakkimizda', (req, res) => {
+    res.render('about')
+})
+
+app.get('/hizmetlerimiz', (req, res) => {
+    res.render('services')
+})
 
 
-app.get('*', (req,res)=>{
+
+app.get('*', (req, res) => {
     res.render('404')
 })
 
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log(`The server is listening on port ${port}`)
 })
