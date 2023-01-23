@@ -29,6 +29,14 @@ app.get('/hizmetlerimiz', (req, res) => {
     res.render('services')
 })
 
+app.get('/blog/en-iyi-web-tasarim-programlari-hangileridir', (req, res) => {
+    res.render('blog/en-iyi-web-tasarim-programlari-hangileridir')
+})
+
+app.get('/blog/ssl-sertifikasi-nedir-ne-ise-yarar-nasil-alinir', (req, res) => {
+    res.render('blog/ssl-sertifikasi-nedir-ne-ise-yarar-nasil-alinir')
+})
+
 
 
 app.get('*', (req, res) => {
